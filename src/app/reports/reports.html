@@ -1,0 +1,27 @@
+<div class="report-container">
+  <!-- Range Selection -->
+  <div class="chart-header">
+    <label for="range">Select Range:</label>
+    <select id="range" [(ngModel)]="selectedRange" (change)="updateChart()">
+      <option value="daily">Daily</option>
+      <option value="monthly">Monthly</option>
+      <option value="yearly">Yearly</option>
+    </select>
+  </div>
+
+  <!-- Chart Title -->
+  <h3 class="chart-title">
+    Energy & Performance - {{ selectedRange | titlecase }}
+  </h3>
+
+  <!-- Chart Canvas -->
+  <div class="chart-wrapper">
+    <canvas
+      *ngIf="isBrowser"
+      baseChart
+      [data]="energyChartData"
+      [options]="energyChartOptions"
+      [type]="energyChartType">
+    </canvas>
+  </div>
+</div>
