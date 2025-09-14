@@ -1,20 +1,14 @@
-<div>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Smart Industry</title>
-</div>
-
-<div>
-  <nav>
-    <div class="logo">PowerPulse</div>
-    <button class="signin-btn">Sign In</button>
-  </nav>
+<div class="layout">
   <div class="center-content">
     <h1><em>PowerPulse</em></h1>
-    <p>We provide innovative solutions for modern industrial automation, helping businesses enhance efficiency, productivity, and sustainability.</p>
-    <button class="get-started-btn">Get Started</button>
+    <p>
+      We provide innovative solutions for modern industrial automation,
+      helping businesses enhance efficiency, productivity, and sustainability.
+    </p>
+    <button class="get-started-btn" (click)="onsignup()">Get Started</button>
   </div>
   <footer>
-    &copy; 2025 Smart Industry. All rights reserved.
-  </footer>
+  <span> &copy; 2025 Smart Industry. All rights reserved. </span>
+  <span> <button class="signin-btn" (click)="onsignin()">Sign In</button> </span>
+  </footer >
 </div>

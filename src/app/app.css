@@ -1,0 +1,13 @@
+.banner {
+  width: 100%;             /* Full width */
+  height: 2cm;             /* 3 cm height */
+  background-color: #1B4332;
+  display: flex;           /* Center the text */
+  justify-content: center; /* Horizontally center */
+  align-items: center;     /* Vertically center */
+  color: white;            /* Text color */
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  letter-spacing: 1px;
+}

@@ -37,7 +37,7 @@
 .popup button {
   width: 100%;
   padding: 10px;
-  background: #28a745; 
+  background: #40916C; 
   color: white;
   border: none;
   border-radius: 5px;
@@ -45,7 +45,7 @@
 }
 
 .popup button:hover {
-  background: #218838;
+  background: #2D6A4F;
 }
 
 .forgot-password {
@@ -60,3 +60,13 @@
 .forgot-password a:hover {
   text-decoration: underline;
 }
+
+    .layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 95vh; 
+}
+nav .logo {
+      font-size: 24px;
+      font-weight: bold;
+    }

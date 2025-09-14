@@ -14,9 +14,9 @@ export class SignIn {
   {
 
   }
-  onsignin()
+  dashboard()
   {
-    console.log("signin button clicked");
-    this.router.navigateByUrl('/home');
+    // console.log("signin button clicked");
+    this.router.navigate(['/dashboard']);
   }
 }
