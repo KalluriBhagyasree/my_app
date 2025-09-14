@@ -1,0 +1,62 @@
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  width: 320px;
+  text-align: center;
+}
+
+.popup h2 {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.popup label {
+  display: block;
+  text-align: left;
+  margin: 8px 0 4px;
+  font-weight: bold;
+  color: #333;
+}
+
+.popup input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+
+.popup button {
+  width: 100%;
+  padding: 10px;
+  background: #28a745; 
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background: #218838;
+}
+
+.forgot-password {
+  margin-top: 10px;
+}
+
+.forgot-password a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.forgot-password a:hover {
+  text-decoration: underline;
+}
