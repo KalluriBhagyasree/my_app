@@ -1,0 +1,39 @@
+<div class="card">
+  <h2>Operator Details</h2>
+
+  <form [formGroup]="operatorForm">
+    <div formArrayName="operators">
+      <div *ngFor="let operator of operators.controls; let i = index" [formGroupName]="i" class="operator-section">
+        <h3>Operator {{ i + 1 }}</h3>
+
+        <label>Operator Name</label>
+        <input type="text" formControlName="operatorName" />
+
+        <label>Phone Number</label>
+        <input type="text" formControlName="operatorPhone" />
+
+        <div formArrayName="machines" class="machine-section">
+          <h4>Machines</h4>
+
+          <div *ngFor="let machine of machines(i).controls; let j = index" [formGroupName]="j" class="machine-card">
+            <label>Machine Name</label>
+            <input type="text" formControlName="machineName" />
+
+            <label>Machine Type</label>
+            <input type="text" formControlName="machineType" />
+
+            <label>Power Limit (kWh)</label>
+            <input type="number" formControlName="powerLimit" />
+          </div>
+
+          <button type="button" class="btn-small" (click)="addMachine(i)">+ Add Machine</button>
+        </div>
+
+        <hr />
+      </div>
+    </div>
+
+    <button type="button" class="btn-small" (click)="addOperator()">+ Add Another Operator</button>
+    <button class="btn-next" (click)="onNext()">Next</button>
+  </form>
+</div>

@@ -1,0 +1,54 @@
+.card {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: white;
+  border: 1px solid #1B4332;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  color: #1B4332;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #1B4332;
+  margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #1B4332;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+button.btn-next {
+  background-color: #40916C;
+  color: white;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+
+button.btn-next:hover {
+  background-color: #367a57;
+}
+
+div.ng-invalid.ng-touched input {
+  border-color: red;
+}

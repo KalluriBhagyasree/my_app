@@ -1,0 +1,40 @@
+<div class="card">
+  <h2>Manager Details</h2>
+
+  <form [formGroup]="managerForm">
+
+    <div class="form-group">
+      <label for="managerName">Manager Name</label>
+      <input type="text" id="managerName" formControlName="managerName" />
+      <div *ngIf="managerForm.get('managerName')?.touched && managerForm.get('managerName')?.invalid">
+        Name is required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="contact">Contact Number</label>
+      <input type="text" id="contact" formControlName="contact" />
+      <div *ngIf="managerForm.get('contact')?.touched && managerForm.get('contact')?.invalid">
+        Valid 10-digit contact required.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="numberOfSections">Number of Sections</label>
+      <input type="number" id="numberOfSections" formControlName="numberOfSections" min="1" />
+      <div *ngIf="managerForm.get('numberOfSections')?.touched && managerForm.get('numberOfSections')?.invalid">
+        Enter at least 1 section.
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="numberOfOperators">Number of Operators</label>
+      <input type="number" id="numberOfOperators" formControlName="numberOfOperators" min="1" />
+      <div *ngIf="managerForm.get('numberOfOperators')?.touched && managerForm.get('numberOfOperators')?.invalid">
+        Enter at least 1 operator.
+      </div>
+    </div>
+
+    <button class="btn-next" (click)="onNext()">Next</button>
+  </form>
+</div>

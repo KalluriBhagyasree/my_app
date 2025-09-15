@@ -1,0 +1,52 @@
+.container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #1B4332;
+  margin-bottom: 30px;
+}
+
+.operator-card {
+  border: 1px solid #1B4332;
+  border-radius: 8px;
+  background-color: white;
+  margin-bottom: 20px;
+  cursor: pointer;
+  padding: 16px;
+  transition: box-shadow 0.3s;
+}
+
+.operator-card:hover {
+  box-shadow: 0 0 10px rgba(64, 145, 108, 0.3);
+}
+
+.card-header h3 {
+  color: #1B4332;
+  margin: 0 0 4px 0;
+}
+
+.card-header p {
+  color: #1B4332;
+  margin: 0;
+}
+
+.machine-list {
+  margin-top: 16px;
+}
+
+.machine-card {
+  padding: 12px;
+  margin-top: 10px;
+  border: 1px solid #1B4332;
+  border-radius: 6px;
+  background-color: #f9f9f9;
+}
+
+.machine-card p {
+  margin: 6px 0;
+  color: #1B4332;
+}

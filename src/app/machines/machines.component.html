@@ -1,1 +1,27 @@
-<p>machines works!</p>
+<div class="container">
+  <h2>Machine Energy Consumption</h2>
+
+  <div class="card-grid">
+    <div *ngFor="let operator of operators; let i = index" class="operator-card">
+      <div class="card-header" (click)="toggleCard(i)">
+        <h3>{{ operator.operatorName }}</h3>
+        <p>📞 {{ operator.operatorPhone }}</p>
+      </div>
+
+      <div class="machine-list" *ngIf="isExpanded(i)">
+        <h4 class="machine-heading">Machines</h4>
+
+        <div *ngFor="let machine of operator.machines" class="machine-card">
+          <p><strong>Machine Name:</strong> {{ machine.machineName }}</p>
+          <p><strong>Type:</strong> {{ machine.machineType }}</p>
+          <p><strong>Limit:</strong> {{ machine.powerLimit }} kWh</p>
+          <p><strong>Current:</strong> 75.5 kWh</p>
+          <p>
+            <strong>Difference:</strong>
+            <span class="under">+24.5 kWh</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

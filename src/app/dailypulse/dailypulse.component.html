@@ -1,0 +1,31 @@
+<div class="status-container">
+  <!-- Date and Time -->
+  <div class="header">
+    <h2>Status Dashboard</h2>
+    <p>{{ currentTime }}</p>
+  </div>
+
+  <!-- Main Units Consumption Progress -->
+  <div class="unit-progress">
+    <p>Units Consumed: {{ unitConsumed }} / {{ unitLimit }}</p>
+    <div class="progress-bar">
+      <div class="progress-fill" [style.width.%]="progressPercent"></div>
+    </div>
+  </div>
+
+  <!-- Shift Cards -->
+  <div class="shift-cards">
+    <div class="card" *ngFor="let shift of shiftData">
+      <h3>{{ shift.shift }}</h3>
+      <p>Limit: {{ shift.limit }}</p>
+      <p>Consumed: {{ shift.consumed }}</p>
+      <div class="progress-bar small">
+        <div
+          class="progress-fill"
+          [style.width.%]="(shift.consumed / shift.limit) * 100"
+        ></div>
+      </div>
+    </div>
+  </div>
+</div>
+
